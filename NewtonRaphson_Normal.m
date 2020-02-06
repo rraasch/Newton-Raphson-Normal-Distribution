@@ -4,14 +4,15 @@
 %Generate a sample of size 1000 from N(2, 1).
 %Use the Newton-Raphson method to estimate mu and sigma^2
 
+%set seed
 rng(1)
 
 %random sample of n=1000 random numbers from N(2, 1)
-n = 1000;
+n = 100000;
 x = normrnd(2, 1, n, 1);
 
 %set tolerance
-tol = 0.00001;
+tol = 0.000001;
 
 %set initial values:
 mu_0 = 3.5;
@@ -42,8 +43,3 @@ end
 display([newline 'mu is ', num2str(thetahat(1))])
 display([newline 'sigma^2 is ', num2str(thetahat(2))])
 display([newline 'number of iterations is ', num2str(iter), newline])
-
-%discussion
-
-%convert to word file and print out for dr. Kim by Thursday
-
